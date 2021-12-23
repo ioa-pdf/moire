@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ge0metric err0rs</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Rajdhani:wght@300&family=Roboto:wght@100&family=Work+Sans:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="flavicon" href="img/flav-0.png" />
+  </head>
+
+  <style>
+    body {
+      margin: 0px;
+      height: 100vh;
+      overflow: hidden;
+      background-image: url(img/grid-tile.png);
+    }
+    .muis {
+      width: 1000vw;
+      height: 1000vh;
+      position: absolute;
+      transform-origin: center;
+      top: 0;
+      left: 0;
+
+      background-image: url(img/grid-tile.png);
+      /* animation-name: slow-rotate;
+      animation-duration: 50s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; */
+      /* transform: translate(-50%, -50%) rotate(0deg); */
+    }
+
+    @keyframes slow-rotate {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+
+    .img-1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      height: 100vh;
+      width: 80%;
+      position: relative;
+      text-align: center;
+      color: black;
+      font-size: 60px;
+    }
+
+    * {
+      font-family: "Courier Prime", monospace;
+      font-family: "Rajdhani", sans-serif;
+      font-family: "Roboto", sans-serif;
+      font-family: "Work Sans", sans-serif;
+      color: white;
+    }
+
+    p {
+      font-size: 15px;
+      color: #adadad;
+      text-align: center;
+      animation: blink 7s;
+      animation-iteration-count: infinite;
+    }
+    a img {
+      width: 50px;
+      height: auto;
+      opacity: 50%;
+    }
+    p {
+      font-size: 15px;
+      color: #adadad;
+      text-align: center;
+      animation: blink 7s;
+      animation-iteration-count: infinite;
+    }
+    .back,
+    .next {
+      height: 40%;
+      width: auto;
+    }
+  </style>
+
+  <body>
+    <div class="muis"></div>
+
+    <div class="header">
+      <a href="INDEX.html"> <img alt="" /></a>
+      <h1></h1>
+      <a href="movie.html"></a>
+    </div>
+
+    <br />
+    <br />
+    <div class="footer">
+      <a></a>
+      <p></p>
+      <a href="circlemuis.html"
+        ><img class="next" src="img/pijl_rechts_zw.png"
+      /></a>
+    </div>
+    <script>
+      // leest het beeld in en zet het in een variable
+      let beeld = document.querySelector(".muis");
+
+      let offsetX = 0;
+      let offsetY = 0;
+
+      // functie vraagt de positie van de muis en veranderd de positie van het beeld.
+      // de helft van de orginile width en height (zie style) trek ik er hier van af
+      // op die manier staat de svg centraal tov de muis
+
+      function onMouseMove(e) {
+        offsetX += e.movementX * 0.05;
+        offsetY += e.movementY * 0.05;
+        beeld.style.left = offsetX + "px";
+        beeld.style.top = offsetY + "px";
+      }
+
+      // event voor  muismove
+      window.addEventListener("mousemove", onMouseMove);
+    </script>
+  </body>
+</html>
