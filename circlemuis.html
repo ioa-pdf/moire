@@ -18,7 +18,11 @@
   <style>
     body {
       margin: 0px;
-      height: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background-image: url(img/cursor_blue_moire.svg);
+      background-size: cover;
+      background-position: center;
     }
     .muis {
       width: 700px;
@@ -27,6 +31,7 @@
       transform-origin: center;
       top: 0;
       left: 0;
+      transform: translate(-50%, -50%);
     }
     .img-1 {
       display: flex;
@@ -83,9 +88,7 @@
       <h1></h1>
       <a href="movie.html"></a>
     </div>
-    <div class="img-1">
-      <img class="grid" src="img/cursor_blue_moire.svg" />
-    </div>
+
     <br />
     <br />
     <div class="footer">
@@ -101,17 +104,20 @@
       // de helft van de orginile width en height (zie style) trek ik er hier van af
       // op die manier staat de svg centraal tov de muis
 
-      function loop(e) {
+      function onMouseMove(e) {
         let posX = e.clientX;
         let posY = e.clientY;
-        beeld.style.left = posX - 200 + "px";
-        beeld.style.top = posY - 200 + "px";
-        requestAnimationFrame(loop);
+        beeld.style.left = posX + "px";
+        beeld.style.top = posY + "px";
+
+        let percentageOffset = e.clientX / window.innerWidth;
+        let size = 100 + percentageOffset * 5000;
+        beeld.style.width = size + "px";
+        beeld.style.height = size + "px";
       }
 
       // event voor  muismove
-      window.addEventListener("mousemove", loop);
-      loop();
+      window.addEventListener("mousemove", onMouseMove);
     </script>
   </body>
 </html>
