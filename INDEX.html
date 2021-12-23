@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ge0metric err0rs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Open+Sans:wght@300&family=Poppins&family=Rajdhani:wght@300&family=Roboto+Mono:wght@200&family=Roboto:wght@100;300&family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon" type="flavicon" href="img/flav-0.png">
+
+
+</head>
+
+<style>
+    * {
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+    }
+    .img-grid {
+    max-width: 75%;
+    min-width: 50%;
+    height: auto;
+    top: 10px;
+    height: 50vh;;
+}
+    a img {
+        width: 50px;
+        height: auto;
+    }
+p{
+    font-size: 17px;
+    color: white;
+    opacity: 50%;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+.back, .next{
+    height: 40%;
+    width: auto;
+}
+img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+        font-size: 15px;
+        color: #adadad;
+        text-align: center;
+    } 
+    .words{
+        display: block;
+        margin-left: auto;
+       margin-right: auto;
+        width: 90%;
+        top: 40vh;
+        color: #adadad;
+        animation: blink 9s;
+        animation-iteration-count: infinite;
+    }
+</style>
+
+<body style="background-color: black;">
+    <div class="cursor" id="cursor"></div>
+    <script>
+        var cursor = document.getElementById("cursor");
+        document.body.addEventListener("mousemove", function(e) {
+            cursor.style.left = e.clientX + "px",
+                cursor.style.top = e.clientY + "px";
+        });
+    </script>
+
+    <div class="img-1">
+        <div class="header">
+            <h1></h1>
+            <h1> </h1>
+            <h1> </h1>
+        </div>
+    </div>
+   <img class="words" src="img/intro.png" alt="">
+   <br>
+   <br>
+    <br>
+    <div class="footer">
+        <p>@Sint Lucas Antwerpen</p>
+        <p>claudia seeldrayers</p>
+        <a href="muis.html"><img class="next" src="img/pijl_rechts_blue.png" alt=""></a>
+    </div>
+</body></html>
+

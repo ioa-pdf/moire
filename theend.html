@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ge0metric err0rs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Rajdhani:wght@300&family=Roboto:wght@100&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" type="flavicon" href="img/flav-0.png">
+</head>
+
+<style>
+    * {
+        font-family: 'Courier Prime', monospace;
+        font-family: 'Rajdhani', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Work Sans', sans-serif;
+        color: white;
+    }
+
+    a {
+        font-size: 15px;
+        color: white;
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .img-1 {
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        text-align: center;
+        color: black;
+        font-size: 15px;
+    }
+
+    a img {
+        width: 50px;
+        height: auto;
+        opacity: 50%;
+    }
+    p {
+        font-size: 15px;
+        color: #adadad;
+        text-align: center;
+    } 
+    .back, .next{
+    height: 40%;
+    width: auto;
+}
+
+</style>
+
+<body style="background-color: black;">
+    <div class="cursor" id="cursor"></div>
+    <script>
+        var cursor = document.getElementById("cursor");
+        document.body.addEventListener("mousemove", function(e) {
+            cursor.style.left = e.clientX + "px",
+                cursor.style.top = e.clientY + "px";
+        });
+
+        var i = 0;
+        var txt = 'Lorem ipsum typing effect!'; /* The text */
+        var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
+        <div class="header">
+            <a href="INDEX.html"> <img src="img/figuren_icon.png" alt=""></a>
+            <h1> You got to the end!</h1>
+            <a href="movie.html"> </a>
+        </div>
+    <div class="img-1">
+        <br>
+        <br>
+        <br>
+        <br>
+        <p style="opacity: 80%;">I hope you enjoyed the trip :)</p>
+        <p style="opacity: 80%;">With special thanks to my tutors and Sint Lucas Antwerpen</p>
+        <p style="opacity: 80%;">All rights reserved</p>
+        <br>
+        <br>
+        <video width="800" height="500" controls autoplay>
+            <source src="img/black_canvas.mp4" type="video/mp4">
+
+        </video>
+    </div>
+    <div class="footer">
+        <p>@Sint Lucas Antwerpen</p>
+        <p>claudia seeldrayers</p>
+        <a href="INDEX.html">Replay</a>
+    </div>
+</body>
+</html>

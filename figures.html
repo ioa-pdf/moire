@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ge0metric err0rs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Rajdhani:wght@300&family=Roboto:wght@100&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" type="flavicon" href="img/flav-0.png">
+</head>
+
+<style>
+    * {
+        font-family: 'Courier Prime', monospace;
+        font-family: 'Rajdhani', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Work Sans', sans-serif;
+        color: white;
+    }
+.small-icon {
+    width: 90px;
+    height: auto;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    opacity: 20%;
+    }
+.figuren{
+    display: flex;
+    justify-content: center; 
+}
+    .figuren img {
+    width: 250px;
+    height: 40vh;
+    margin: 0 auto;
+    max-width: 95%;
+}
+.back, .next{
+    height: 40%;
+    width: auto;
+}
+
+p {
+        font-size: 15px;
+        color: #adadad;
+        text-align: center;
+        animation: blink 7s;
+        animation-iteration-count: infinite;
+    } 
+
+</style>
+
+<body style="background-color: black;">
+    <div class="cursor" id="cursor"></div>
+    <script>
+        var cursor = document.getElementById("cursor");
+        document.body.addEventListener("mousemove", function(e) {
+            cursor.style.left = e.clientX + "px",
+                cursor.style.top = e.clientY + "px";
+        });
+    </script>
+    <div class="header">
+        <img class="small-icon" alt="">
+        <p> click on the figure to reveal it's moiré</p>
+        <a href=""></a>
+    </div>
+    <br>
+    <br>
+    <div class="figuren">
+        <a href="cirkles.html">
+            <img src="img/cirkel_fig.svg" alt=""></a>
+        <a href="squares.html">
+            <img src="img/vierk_fig.svg" alt=""></a>
+        <a href="triangles.html">
+            <img src="img/driehoek_fig.svg"></a>
+
+    </div>
+    <div class="figuren">
+        <a href="muis.html">
+            <img src="img/lijn.svg" alt=""></a>
+        <a href="star.html">
+            <img src="img/star_fig.svg" alt=""></a>
+        <a href="hexagon.html">
+            <img src="img/zesho_fig.svg" alt=""></a>
+        
+    </div>
+    <br>
+    <br>
+    <div class="footer">
+        <a href="INDEX.html"><img class="back" src="img/pijl_linkspng.png" alt=""></a>
+        <a> </a>
+        <a href="cirkles.html"><img class="next" src="img/pijl_rechts.png" alt=""></a>
+    </div>
+
+
+
+</body></html>

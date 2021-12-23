@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ge0metric err0rs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Rajdhani:wght@300&family=Roboto:wght@100&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" type="flavicon" href="img/flav-0.png">
+</head>
+<style>
+    * {
+        background-color: black;
+        font-family: 'Courier Prime', monospace;
+        font-family: 'Rajdhani', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Work Sans', sans-serif;
+        color: white;
+    }
+
+    html {
+        cursor: url(img/cursor-square.png), auto;
+
+    }
+
+
+    a img {
+        width: 50px;
+        height: auto;
+        opacity: 50%;
+    }
+.back, .next{
+    height: 40%;
+    width: auto;
+}
+
+
+p {
+        font-size: 15px;
+        color: #adadad;
+        text-align: center;
+        animation: blink 7s;
+        animation-iteration-count: infinite;
+    } 
+    .img-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        color: black;
+        font-size: 60px;
+    }
+
+</style>
+
+<body>
+    <div class="cursor" id="cursor"></div>
+    <script>
+        var cursor = document.getElementById("cursor");
+        document.body.addEventListener("mousemove", function(e) {
+            cursor.style.left = e.clientX + "px",
+                cursor.style.top = e.clientY + "px";
+        });
+
+    </script>
+       <div class="img-1">
+        <div class="header">
+            <a href="figures.html"> <img src="img/figuren_icon.png" alt=""></a>
+            <h1></h1>
+            <h1> </h1>
+        </div>
+    </div>
+    <canvas id="c"> </canvas>
+    <script>
+        var myC = document.querySelector('#c');
+        var ctx = myC.getContext('2d');
+        myC.width = window.innerWidth;
+        myC.height = window.innerHeight;
+        var centerX = myC.width / 2;
+        var centerY = myC.height / 2;
+        var rSize = 200;
+        var counter = 0;
+
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 0.1;
+
+        function draw(e) {
+            if (e.clientX > 0) {
+                centerX += (e.clientX - centerX) * 0.01;
+                centerY += (e.clientY - centerY) * 0.01;
+            }
+            rSize = 500 * Math.sin(counter / 100.0);
+            ctx.strokeRect(centerX - rSize / 2, centerY - rSize / 2, rSize, rSize);
+            counter++;
+        }
+        window.addEventListener('mousemove', draw);
+
+    </script>
+    <div class="header">
+        <a href="INDEX.html"> <img src="img/figuren_icon.png" alt=""></a>
+        <h1></h1>
+        <a href="movie.html"> </a>
+    </div>
+
+<div class="footer">
+    <a href="star.html"><img class="back" src="img/pijl_linkspng.png" alt=""></a>
+    <p>move your mouse</p>
+    <a href="muis.html"><img class="next" src="img/pijl_rechts.png" alt=""></a>
+</div>
+</body>
+
+</html>

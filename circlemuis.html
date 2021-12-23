@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ge0metric err0rs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Rajdhani:wght@300&family=Roboto:wght@100&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" type="flavicon" href="img/flav-0.png">
+</head>
+
+<style>
+    body{
+        margin:0px;
+  height:100%;
+    }
+ .muis{
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    transform-origin: center;
+    top: 0;
+    left: 0; 
+    }
+    .img-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        height: 100vh;
+        width: 80%;
+        position: relative;
+        text-align: center;
+        color: black;
+        font-size: 60px;
+    }
+
+    * {
+        font-family: 'Courier Prime', monospace;
+        font-family: 'Rajdhani', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Work Sans', sans-serif;
+        color: white;
+    }
+  
+    p {
+        font-size: 15px;
+        color: #adadad;
+        text-align: center;
+        animation: blink 7s;
+        animation-iteration-count: infinite;
+    }
+    a img {
+        width: 50px;
+        height: auto;
+        opacity: 50%;
+    }
+    p {
+        font-size: 15px;
+        color: #adadad;
+        text-align: center;
+        animation: blink 7s;
+        animation-iteration-count: infinite;
+    } 
+    .back, .next{
+    height: 40%;
+    width: auto;
+}
+</style>
+
+<body style="background-color: black;">
+    <img class='muis' src="img/cursor_blue_moire.svg" alt="">
+    <script>
+                // leest het beeld in en zet het in een variable
+let beeld = document.querySelector('img');
+
+// functie vraagt de positie van de muis en veranderd de positie van het beeld.
+// de helft van de orginile width en height (zie style) trek ik er hier van af
+// op die manier staat de svg centraal tov de muis
+
+function loop(e){
+let posX = e.clientX;
+let posY = e.clientY;
+    beeld.style.left = (posX-200)+"px";
+    beeld.style.top = (posY-200)+"px";
+    requestAnimationFrame(loop);
+}
+
+// event voor  muismove
+window.addEventListener('mousemove', loop);
+loop();
+
+    </script>
+    <div class="header">
+        <a href="INDEX.html"></a>
+       <h1></h1>
+        <a href="movie.html"></a>
+    </div>
+    <div class="img-1">
+        <img class="grid" src="img/cursor_blue_moire.svg">
+
+    </div>
+    <br>
+    <br>
+    <div class="footer">
+        <a href="muis.html"><img class="back" src="img/pijl_linkspng.png"></a>
+        <p></p>
+        <a></a>
+    </div>
+
+</body></html>
